@@ -1,0 +1,104 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&subset=latin-ext');
+
+/* box model */
+html { box-sizing: border-box; }
+*, *:after, *:before { box-sizing: border-box;}
+
+body {
+	padding: 10px 30px;
+	background: bisque url(images/pozadi.jpg) center center no-repeat;
+	background-size: cover;
+	color: black;
+	min-height: 100vh;
+}
+
+h1 {
+	margin: 30px 0;
+	font: 60px/1 'Alfa Slab One', sans-serif;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.pexeso {
+	width: 540px;
+	margin: 30px auto;
+	display: grid;
+	grid-template-columns: repeat(4, 120px);
+	grid-gap: 20px;
+	perspective: 1000px;
+}
+
+.pexeso > * {
+	position: relative;
+	border: 3px solid rgba(255, 255, 255, 0.5);
+	border-radius: 6px;
+	box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+	transition: all 0.3s;
+}
+
+.pexeso > *:nth-child(6n+1) { transform: rotate(-2deg); }
+.pexeso > *:nth-child(6n+2) { transform: rotate(3deg); }
+.pexeso > *:nth-child(6n+3) { transform: rotate(-4deg); }
+.pexeso > *:nth-child(6n+4) { transform: rotate(2deg); }
+.pexeso > *:nth-child(6n+5) { transform: rotate(1deg); }
+.pexeso > *:nth-child(6n+6) { transform: rotate(-4deg); }
+
+.pexeso > *:not(.otocena):not(.hotovo):not(.spatne):hover {
+	transform: translate(-2px, -2px) scale(1.1);
+	box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+.pexeso img {
+	display: block;
+	width: 100%;
+}
+
+.pexeso > div {
+	transform-style: preserve-3d;
+	cursor: pointer;
+}
+
+.pexeso > div::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(images/rub.jpg);
+	background-size: cover;
+	backface-visibility: hidden;
+	transform: rotateY(0);
+	outline: 1px solid transparent;
+}
+
+.pexeso > div > img {
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	outline-color: transparent;
+	outline-style: none;
+	outline: 1px solid transparent;
+}
+
+
+.pexeso .otocena,
+.pexeso .hotovo,
+.pexeso .spatne {
+	transform: rotateY(180deg);
+	box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.5);
+	cursor: auto;
+}
+
+.pexeso .otocena {
+	border-color: rgba(255, 255, 0, 0.5);
+}
+
+.pexeso .hotovo {
+	border-color: white;
+}
+
+.pexeso .spatne {
+	border-color: orangered;
+}
