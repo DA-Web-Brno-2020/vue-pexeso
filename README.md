@@ -1,6 +1,12 @@
 # VUE PEXESO
 
-Máš kompletně připravený CSS styl, aby hra vypadala hezky. Stačí do <div id="pexeso"> vložit 16 divů, každý div obsahuje 1 obrázek. Je to pexeso, takže ve skutečnosti je to 8 různých obrázků, každý je ve hře dvakrát.
+Vytvoř hru Pexeso a použij k tomu Vue.js.
+
+![Pexeso ukázka](pexeso-ukazka.jpg)
+
+## CSS
+
+Máš kompletně připravený CSS styl, aby hra vypadala hezky. Stačí do `<div id="pexeso">` vložit 16 divů, každý div obsahuje 1 obrázek. Je to pexeso, takže ve skutečnosti je to 8 různých obrázků, každý je ve hře dvakrát.
 
 CSS je napsané tak, že se obrázky automaticky seřadí do mřížky 4x4.
 
@@ -15,7 +21,7 @@ Třída `hotovo` taky otočí kartičku obrázkem nahoru, ale ještě zneprůhle
 
 Třída `spatne` zčervená okraj kartičky - slouží k indikaci, že jsme otočili dva obrázky, které nejsou stejné.
 
-## Co musíme udělat:
+## Co musíme udělat
 
 1. Vymyslet datovou strukturu, ve které budeme uchovávat naši hru. Pravděpodobně půjde o nějaké pole objektů. Co všechno musíme o kartičce uchovávat za informace, aby hra mohla fungovat?
 
